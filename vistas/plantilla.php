@@ -1,7 +1,6 @@
 <?php
 session_start();
 ?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -64,24 +63,24 @@ CUERPO DOCUMENTO
  
   <?php
 
-  if(isset($_SESSION["iniciarSesion"]) && $_SESSION["iniciarSesion"] == "ok"){
+  if(isset($_SESSION["iniciarSesion"]) && $_SESSION["iniciarSesion"] == "ok"){// si hay una sesion de usuario existente 
 
    echo '<div class="wrapper">';
 
     /*=============================================
-    CABEZOTE
+    CABEZOTE: es la barra superior de la app, el archivo cabezote contiene el codigo
     =============================================*/
 
     include "modulos/cabezote.php";
 
     /*=============================================
-    MENU
+    MENU: es la barra lateral de la app, el archivo menu contiene el codigo 
     =============================================*/
 
     include "modulos/menu.php";
 
     /*=============================================
-    CONTENIDO
+    CONTENIDO: en esta seccion se cargaran las diferentes vistas de la app
     =============================================*/
 
     if(isset($_GET["ruta"])){
@@ -111,7 +110,7 @@ CUERPO DOCUMENTO
     }
 
     /*=============================================
-    FOOTER
+    FOOTER: es el footer de la app, el archivo footer contiene el codigo
     =============================================*/
 
     include "modulos/footer.php";
@@ -119,12 +118,14 @@ CUERPO DOCUMENTO
     echo '</div>';
 
   }else{
-
+    /* 
+    en caso de no existir una sesion de usuario se cargar el archivo login el cual contiene el codigo necesario
+    para visualizar el login
+    */
     include "vistas/modulos/login.php";
 
   }
-
   ?>
-<script src="vistas/js/plantilla.js"></script>
 </body>
+  <script src="vistas/js/plantilla.js"></script>
 </html>

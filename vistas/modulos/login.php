@@ -39,6 +39,7 @@
       </div>
 
       <?php
+        /* se crea un objeto de la clase controlador usuario */
         $login = new ControladorUsuarios();
         $login -> ctrIngresoUsuario();
         

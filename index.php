@@ -1,6 +1,7 @@
 <?php
-
+/* controlador principal  */
 require_once "php/controladores/plantilla.controlador.php";
+
 require_once "php/controladores/usuarios.controlador.php";
 require_once "php/controladores/categorias.controlador.php";
 require_once "php/controladores/productos.controlador.php";
@@ -15,3 +16,10 @@ require_once "php/modelos/ventas.modelo.php";
 
 $plantilla = new ControladorPlantilla();
 $plantilla -> ctrPlantilla();
+/*
+
+el archivo plantilla.controlador
+contiene una clase y una funcion dicha funcion hace un include
+del archivo plantilla.php, "vistas/plantilla.php";
+
+*/

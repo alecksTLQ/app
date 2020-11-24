@@ -13,10 +13,17 @@ class ControladorUsuarios{
 			if(preg_match('/^[a-zA-Z0-9]+$/', $_POST["ingUsuario"]) &&
 			   preg_match('/^[a-zA-Z0-9]+$/', $_POST["ingPassword"])){
 
-				$tabla = "usuarios";
-
-				$item = "usuario";
-				$valor = $_POST["ingUsuario"];
+				$tabla 	= "usuarios";
+				$item 	= "usuario";
+				$valor 	= $_POST["ingUsuario"]; 
+				/*$items = array(
+					"usuario",
+					"password"
+				);*/
+				/*$valores = array(
+					$_POST["ingUsuario"],
+					$_POST["ingPassword"]
+				);*/
 
 				$respuesta = ModeloUsuarios::MdlMostrarUsuarios($tabla, $item, $valor);
 
